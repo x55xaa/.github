@@ -1,0 +1,32 @@
+name: Documentation Change
+description: Request a documentation update.
+title: "docs: <title>"
+labels: ["documentation"]
+
+assignees:
+  - x55xaa
+body:
+  - type: textarea
+    attributes:
+      label: Documentation Change Description
+      description: A description of what you would like changed or added.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version of our software are you running?
+      placeholder: 1.0.0
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](../../CODE_OF_CONDUCT.md).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

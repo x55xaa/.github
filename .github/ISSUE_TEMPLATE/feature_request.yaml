@@ -1,0 +1,44 @@
+name: Feature Request
+description: Request a new feature.
+title: "feat: <title>"
+labels: ["enhancement"]
+
+assignees:
+  - x55xaa
+body:
+  - type: textarea
+    attributes:
+      label: Feature Description
+      description: A description of what feature you would like to be added.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version of our software are you running?
+      placeholder: 0.0.1
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: operating-systems
+    attributes:
+      label: Which operating systems have you used?
+      description: You may select more than one.
+      options:
+        - label: Linux
+        - label: macOS
+        - label: Windows
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](../../CODE_OF_CONDUCT.md).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
